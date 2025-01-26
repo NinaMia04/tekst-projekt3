@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Multimedia w HTML – około 700 słów</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Multimedia w HTML </h1>
+
+<p>
+  Współczesny internet w dużej mierze opiera się na mediach, które angażują użytkowników w znacznie
+  większym stopniu niż zwykły tekst. Mamy do czynienia z filmami, podcastami, transmisjami na żywo, 
+  a także rozmaitymi interaktywnymi treściami – wszystko to jest możliwe dzięki ewolucji języka HTML. 
+  Kiedyś wstawienie wideo na stronę wiązało się z koniecznością korzystania z wtyczek czy 
+  odtwarzaczy Flash, dzisiaj jednak standard HTML5 wprowadził wbudowane elementy, takie jak 
+  <code>&lt;video&gt;</code> i <code>&lt;audio&gt;</code>, umożliwiając nam publikację materiałów 
+  multimedialnych w sposób znacznie prostszy i bardziej niezawodny. Jeśli ktoś chce poznać 
+  podstawy i sprawdzić działanie tych elementów, może zajrzeć do popularnych źródeł edukacyjnych, 
+  na przykład na stronie <a href="https://www.w3schools.com/html/html_media.asp" target="_blank">
+  w3schools.com</a>.
+</p>
+
+<p>
+  Zacznijmy od podstawowego znacznika <code>&lt;video&gt;</code>. To właśnie on, w połączeniu 
+  z jednym lub kilkoma znacznikami <code>&lt;source&gt;</code>, daje nam możliwość osadzania 
+  różnych formatów plików wideo, takich jak MP4, WebM czy Ogg. Czemu różne formaty są ważne? 
+  Ponieważ przeglądarki korzystają z różnych kodeków i nie każda z nich „lubi” dany typ. Jeśli 
+  dołączymy kilka formatów źródłowych, mamy większą pewność, że nasz materiał wideo zostanie 
+  odtworzony poprawnie na większości urządzeń i w wielu systemach operacyjnych.
+</p>
+
+<p>
+  Co jeszcze można ustawić w kontekście <code>&lt;video&gt;</code>? Najczęściej spotykany jest 
+  atrybut <code>controls</code>, który wyświetla domyślny zestaw przycisków: odtwarzania, pauzy, 
+  regulacji głośności i suwaka postępu. Wiele stron stosuje też <code>autoplay</code>, choć 
+  trzeba pamiętać, że niektóre przeglądarki domyślnie blokują dźwięk, by nie irytować 
+  użytkowników. Podobnie działa <code>loop</code>, które po zakończeniu filmu rozpoczyna go 
+  od początku. Istnieje też atrybut <code>poster</code>, który pozwala ustalić obrazek wyświetlany 
+  przed startem odtwarzania, dzięki czemu mamy wpływ na pierwsze wrażenie widza.
+</p>
+
+<p>
+  Bardzo ważna jest również kwestia tzw. preloadingu. Atrybut <code>preload</code> kontroluje, 
+  czy przeglądarka ma wstępnie pobrać film w całości, pobrać tylko metadane (czyli podstawowe 
+  informacje o wideo) czy w ogóle nie ruszać pliku, dopóki użytkownik nie kliknie „play”. 
+  Dlaczego to istotne? Jeśli oferujemy długi film w wysokiej rozdzielczości, a odbiorca ma słabe 
+  łącze, preloading całego pliku może niepotrzebnie spowolnić ładowanie strony. Z drugiej strony, 
+  jeśli zależy nam na szybkim odtwarzaniu filmu, ustawienie <code>preload="auto"</code> może 
+  poprawić wrażenia widza, bo plik będzie się buforował wcześniej.
+</p>
+
+<p>
+  Drugim kluczowym elementem multimedialnym jest <code>&lt;audio&gt;</code>, dedykowany plikom 
+  dźwiękowym. Działanie jest analogiczne do wideo, ale dotyczy muzyki, podcastów, efektów 
+  dźwiękowych i wszystkich innych form audio. Ponownie mamy do dyspozycji <code>&lt;source&gt;</code>, 
+  a także te same atrybuty, typu <code>controls</code> czy <code>autoplay</code>. Popularne 
+  formaty to MP3, Ogg Vorbis oraz WAV, przy czym MP3 jest chyba najbardziej rozpowszechniony. 
+  Warto pamiętać, że pewne starsze przeglądarki mogą inaczej obsługiwać różne formaty, ale dziś 
+  – dzięki HTML5 – jest to zdecydowanie prostsze, niż jeszcze kilka lat temu.
+</p>
+
+<p>
+  Jeżeli nie chcemy samodzielnie hostować plików wideo czy audio, bo mogą zajmować sporo miejsca 
+  i transferu, istnieje możliwość skorzystania z usług zewnętrznych. YouTube, Vimeo czy 
+  SoundCloud umożliwiają osadzenie materiałów za pomocą kodu iframe. Wystarczy wstawić wygenerowany 
+  fragment do kodu strony, by na przykład film z YouTube był dostępny bezpośrednio na naszej 
+  witrynie. Korzyścią jest to, że nie martwimy się o różnice formatów i przepustowość serwera, 
+  bo wszystkim zajmuje się dana platforma. Ponadto, często oferują one statystyki odtworzeń, 
+  polubienia czy komentarze, co pozwala nam lepiej poznać odbiorców.
+</p>
+
+<p>
+  Oczywiście, nie wolno zapominać o dostępności (accessibility). Tworząc materiały multimedialne, 
+  powinniśmy dbać o to, by filmy miały napisy (dla osób niesłyszących lub w sytuacjach, gdy 
+  włączony dźwięk jest niemożliwy) i by istniała alternatywa tekstowa dla kluczowych treści 
+  dźwiękowych. Transkrypcje mogą też pomóc w pozycjonowaniu (SEO), bo wyszukiwarki indeksują 
+  słowa kluczowe z tekstu. Standardy WCAG wyraźnie mówią, że multimedia nie powinny wykluczać 
+  żadnej grupy użytkowników. 
+</p>
+
+<p>
+  Przy dodawaniu multimediów kluczową rolę odgrywa także optymalizacja. Pliki w wysokiej jakości 
+  szybko pochłaniają duże ilości transferu. Dziś spory procent ruchu internetowego pochodzi 
+  z urządzeń mobilnych, więc warto, by materiały ładowały się sprawnie także na wolniejszych 
+  łączach. Kompresja odpowiednim kodekiem, takim jak H.264 czy H.265 w wideo, może znacząco 
+  zmniejszyć rozmiar. A pamiętajmy jeszcze o tym, by filmy były responsywne – na telefonie czy 
+  tablecie wideo powinno się skalować do rozdzielczości ekranu, często stosuje się tu regułę 
+  CSS <code>max-width: 100%;</code>, by zapewnić elastyczność. 
+</p>
+
+<p>
+  Na koniec warto wspomnieć o możliwościach łączenia multimediów z JavaScriptem. Dzięki 
+  interfejsom API możemy sterować odtwarzaniem, zatrzymywać film w określonym momencie, 
+  synchronizować napis czy wstawiać dynamiczne opisy. Wszystko to sprawia, że internet staje 
+  się bogatszy i ciekawszy, a materiały edukacyjne, rozrywkowe czy artystyczne mogą być znacznie 
+  łatwiej publikowane i udostępniane. 
+</p>
+
+<p>
+  Podsumowując, HTML5 znacznie uprościł obsługę multimediów, udostępniając tagi <code>&lt;video&gt;</code> 
+  i <code>&lt;audio&gt;</code>. Już nie musimy opierać się wyłącznie na wtyczkach, a możliwości 
+  konfiguracji pozwalają na wygodne dostosowanie sposobu odtwarzania do naszych potrzeb. Użytkownicy 
+  otrzymują intuicyjne kontrolki, a twórcy stron mają kontrolę nad tym, jak film lub audio 
+  prezentuje się gościom. Warto też pamiętać o kwestiach prawnych i licencjach – zawsze sprawdzajmy, 
+  czy mamy prawo do publikacji danego materiału i czy nasz sposób integracji nie łamie warunków 
+  korzystania z serwisu zewnętrznego. 
+</p>
+
+<p>
+  To już prawie wszystko, co najważniejsze w kontekście wideo i audio w HTML. Aby lepiej 
+  zrozumieć każdy element, polecam samodzielne eksperymenty – np. przygotowanie prostego 
+  pliku HTML z różnymi parametrami, sprawdzenie, jak działają napisy czy integracja z innymi 
+  usługami. W ten sposób nauka staje się przystępna i twórcza. W końcu internet to nie tylko 
+  źródło informacji, ale też przestrzeń do dzielenia się własną pasją, pomysłami i twórczością 
+  w formie multimedialnej.
+</p>
+
+</body>
+</html>
